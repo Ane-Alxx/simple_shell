@@ -124,8 +124,8 @@ char *pathfinder(info_t *, char *, char *);
 int sh_loop(char **);
 
 
-void _enviroputs(char *);
-int _enviroputchar(char);
+void _envputs(char *);
+int _envputchar(char);
 int _fdput(char c, int fd);
 int _fdputs(char *str, int fd);
 
@@ -185,14 +185,14 @@ void info_clr(info_t *);
 void info_st(info_t *, char **);
 void info_f(info_t *, int);
 
-char *_envgt(info_t *, const char *);
+char *_getenv(info_t *, const char *);
 int _unikenv(info_t *);
 int _uniksetenv(info_t *);
 int _unikunsetenv(info_t *);
 int fill_envlist(info_t *);
 
-char **environgt(info_t *);
-int _usetenv(info_t *, char *);
+char **getenviron(info_t *);
+int _unsetenv(info_t *, char *);
 int _setenv(info_t *, char *, char *);
 
 char *get_histy_file(info_t *info);
