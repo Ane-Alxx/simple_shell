@@ -23,8 +23,8 @@
 	char *_strcat(char *go_to, char *from);
 	int _putchar(char symb);
 
-	char *_getpathsub(char **env);
-	int _valpathsub(char **arg, char **env);
+	char *_get_pathsub(char **env);
+	int _val_pathsub(char **arg, char **env);
 	char *_getlinesub(void);
 	void _getenv(char **env);
 	char **tokenize(char *pointer);
