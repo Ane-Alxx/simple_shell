@@ -27,7 +27,7 @@ int main(int c, char **v, char **env)
 				_getenv(env);
 			else
 			{
-				path = _valpathsub(&coms[0], env);
+				path = _val_pathsub(&coms[0], env);
 				state = _forkset(coms, v, env, ln, p_val, path);
 					if (state == 200)
 					{

@@ -8,7 +8,7 @@ int sh_helpsub(char **argu);
 
 char *prefabs[] = {"cd", "help", "exit", "^D"};
 
-int (*prefab_sub[]) (char **) = {&sh_cdsub, &sh_helpsub, &sh_exitsub, &sh_ctrlsub};
+int (*prefab[]) (char **) = {&sh_cdsub, &sh_helpsub, &sh_exitsub, &sh_ctrlsub};
 
 /**
 * sh_numprefab - function to get length
@@ -109,7 +109,7 @@ int _forkset(char **arg, char **a, char **env, char *pointer, int o, int s)
 	for (k = 0; k < sh_numprefab(); k++)
 	{
 		if (_strcmp(arg[0], prefabs[k]) == 0)
-			return (prefab_sub[k](arg));
+			return (prefab[k](arg));
 	}
 	c = fork();
 	if (c == 0)
