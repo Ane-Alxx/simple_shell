@@ -87,10 +87,10 @@ int sh_ctrlsub(char **argu)
 }
 
 /**
-*_forkset - make a fork foo
+*_forkset - make a fork
 *@arg: path argument
 *@a: well you’ll see
-*@env: the env 
+*@env: the env
 *@pointer: users line of thought
 *@o: identify process
 *@s: tester variable
